@@ -4,9 +4,7 @@
     // Initiate the wowjs
     new WOW().init();
     
-    // window.onload = function(){ 
-    //     alert("Hi there");
-    //     }
+    
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 200) {

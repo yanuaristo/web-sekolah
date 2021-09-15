@@ -78,7 +78,7 @@ a:focus {
 .top-bar {
     position: relative;
     height: 90px;
-    background: #fdbe33;
+    background: #ffffff;
 }
 
 .top-bar .logo {
@@ -155,7 +155,7 @@ a:focus {
 /**********************************/
 .nav-bar {
     position: relative;
-    background: #fdbe33;
+    background: #ffffff;
     transition: .3s;
 }
 
@@ -174,7 +174,7 @@ a:focus {
 
 .nav-bar .navbar {
     height: 100%;
-    background: #030f27 !important;
+    background: #03421f !important;
 }
 
 .navbar-dark .navbar-nav .nav-link,
@@ -472,7 +472,7 @@ a:focus {
 }
 
 .section-header p {
-    color: #fdbe33;
+    color: #03421f;
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 5px;
@@ -811,7 +811,7 @@ a:focus {
     margin: 45px 0;
     height: 100%;
     min-height: 500px;
-    background: linear-gradient(rgba(3, 15, 39, .9), rgba(3, 15, 39, .9)), url(../img/carousel-1.jpg);
+    background: linear-gradient(rgba(3, 15, 39, .9), rgba(3, 15, 39, .9)), url(../img/videobg.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
