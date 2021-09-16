@@ -1,3 +1,5 @@
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
 export default function TopBar() {
 	return (
 		<div>
@@ -71,35 +73,173 @@ export default function TopBar() {
 
 						<div className="collapse navbar-collapse justify-content-between" id="navbarCollapse">
 							<div className="navbar-nav mr-auto">
-								<a href="index.html" className="nav-item nav-link active">
-									Beranda
-								</a>
+								<Route
+									path="/"
+									exact
+									children={({ match, history }) => {
+										return (
+											<a
+												href="/"
+												className="nav-item nav-link active"
+												selected={match ? true : false}
+												onClick={() => {
+													history.push('/');
+												}}
+											>
+												Beranda
+											</a>
+										);
+									}}
+								/>
 								<div className="nav-item dropdown">
 									<a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">
 										Tentang Sekolah
 									</a>
 									<div className="dropdown-menu">
-										<a href="single.html" className="dropdown-item">
-											Profil Sekolah
-										</a>
-										<a href="blog.html" className="dropdown-item">
-											Visi & Misi
-										</a>
-										<a href="single.html" className="dropdown-item">
-											Struktur Organisasi
-										</a>
-										<a href="single.html" className="dropdown-item">
-											Akreditasi
-										</a>
-										<a href="single.html" className="dropdown-item">
-											Hubungan Industri
-										</a>
-										<a href="single.html" className="dropdown-item">
-											Prestasi Siswa
-										</a>
-										<a href="single.html" className="dropdown-item">
-											Fasilitas
-										</a>
+										<Route
+											path="/"
+											exact
+											children={({ match, history }) => {
+												return (
+													<a
+														href="/profil-sekolah"
+														className="dropdown-item"
+														selected={match ? true : false}
+														onClick={() => {
+															history.push('/profil-sekolah');
+														}}
+													>
+														Profil Sekolah
+													</a>
+												);
+											}}
+										/>
+										<Route
+											path="/"
+											exact
+											children={({ match, history }) => {
+												return (
+													<a
+														href="/visi-misi"
+														className="dropdown-item"
+														selected={match ? true : false}
+														onClick={() => {
+															history.push('/visi-misi');
+														}}
+													>
+														Visi & Misi
+													</a>
+												);
+											}}
+										/>
+										<Route
+											path="/"
+											exact
+											children={({ match, history }) => {
+												return (
+													<a
+														href="/struktur-organisasi"
+														className="dropdown-item"
+														selected={match ? true : false}
+														onClick={() => {
+															history.push('/struktur-organisasi');
+														}}
+													>
+														Struktur Organisasi
+													</a>
+												);
+											}}
+										/>
+										<Route
+											path="/"
+											exact
+											children={({ match, history }) => {
+												return (
+													<a
+														href="/akreditasi"
+														className="dropdown-item"
+														selected={match ? true : false}
+														onClick={() => {
+															history.push('/akreditasi');
+														}}
+													>
+														Akreditasi
+													</a>
+												);
+											}}
+										/>
+										<Route
+											path="/"
+											exact
+											children={({ match, history }) => {
+												return (
+													<a
+														href="/hubungan-industri"
+														className="dropdown-item"
+														selected={match ? true : false}
+														onClick={() => {
+															history.push('/hubungan-industri');
+														}}
+													>
+														Hubungan Industri
+													</a>
+												);
+											}}
+										/>
+										<Route
+											path="/"
+											exact
+											children={({ match, history }) => {
+												return (
+													<a
+														href="/prestasi-siswa"
+														className="dropdown-item"
+														selected={match ? true : false}
+														onClick={() => {
+															history.push('/prestasi-siswa');
+														}}
+													>
+														Prestasi Siswa
+													</a>
+												);
+											}}
+										/>
+										<Route
+											path="/"
+											exact
+											children={({ match, history }) => {
+												return (
+													<a
+														href="/fasilitas"
+														className="dropdown-item"
+														selected={match ? true : false}
+														onClick={() => {
+															history.push('/fasilitas');
+														}}
+													>
+														Fasilitas
+													</a>
+												);
+											}}
+										/>
+										<Route
+											path="/"
+											exact
+											children={({ match, history }) => {
+												return (
+													<a
+														href="/artikel"
+														className="dropdown-item"
+														selected={match ? true : false}
+														onClick={() => {
+															history.push('/artikel');
+														}}
+													>
+														Berita
+													</a>
+												);
+											}}
+										/>
 									</div>
 								</div>
 								<div className="nav-item dropdown">
@@ -107,12 +247,42 @@ export default function TopBar() {
 										Program
 									</a>
 									<div className="dropdown-menu">
-										<a href="blog.html" className="dropdown-item">
-											Profil Jurusan
-										</a>
-										<a href="single.html" className="dropdown-item">
-											Ekstra Kurikuler
-										</a>
+									<Route
+											path="/"
+											exact
+											children={({ match, history }) => {
+												return (
+													<a
+														href="/profil-jurusan"
+														className="dropdown-item"
+														selected={match ? true : false}
+														onClick={() => {
+															history.push('/profil-jurusan');
+														}}
+													>
+														Profil Jurusan
+													</a>
+												);
+											}}
+										/>
+										<Route
+											path="/"
+											exact
+											children={({ match, history }) => {
+												return (
+													<a
+														href="/ekstrakurikuler"
+														className="dropdown-item"
+														selected={match ? true : false}
+														onClick={() => {
+															history.push('/ekstrakurikuler');
+														}}
+													>
+														Ekstra Kurikuler
+													</a>
+												);
+											}}
+										/>
 									</div>
 								</div>
 								<div className="nav-item dropdown">
@@ -120,18 +290,78 @@ export default function TopBar() {
 										Hubungi Kami
 									</a>
 									<div className="dropdown-menu">
-										<a href="blog.html" className="dropdown-item">
-											FAQs
-										</a>
-										<a href="single.html" className="dropdown-item">
-											Kotak Pertanyaan
-										</a>
-										<a href="blog.html" className="dropdown-item">
-											Pusat Bantuan
-										</a>
-										<a href="blog.html" className="dropdown-item">
-											Saran Orang Tua / Wali Siswa
-										</a>
+									<Route
+											path="/"
+											exact
+											children={({ match, history }) => {
+												return (
+													<a
+														href="/faqs"
+														className="dropdown-item"
+														selected={match ? true : false}
+														onClick={() => {
+															history.push('/faqs');
+														}}
+													>
+														FAQs
+													</a>
+												);
+											}}
+										/>
+										<Route
+											path="/"
+											exact
+											children={({ match, history }) => {
+												return (
+													<a
+														href="/pertanyaan"
+														className="dropdown-item"
+														selected={match ? true : false}
+														onClick={() => {
+															history.push('/pertanyaan');
+														}}
+													>
+														Kotak Pertanyaan
+													</a>
+												);
+											}}
+										/>
+										<Route
+											path="/"
+											exact
+											children={({ match, history }) => {
+												return (
+													<a
+														href="/bantuan"
+														className="dropdown-item"
+														selected={match ? true : false}
+														onClick={() => {
+															history.push('/bantuan');
+														}}
+													>
+														Pusat Bantuan
+													</a>
+												);
+											}}
+										/>
+										<Route
+											path="/"
+											exact
+											children={({ match, history }) => {
+												return (
+													<a
+														href="/saran-orang-tua"
+														className="dropdown-item"
+														selected={match ? true : false}
+														onClick={() => {
+															history.push('/saran-orang-tua');
+														}}
+													>
+														Saran Orang Tua / Wali Siswa
+													</a>
+												);
+											}}
+										/>
 									</div>
 								</div>
 								<a href="contact.html" className="nav-item nav-link">

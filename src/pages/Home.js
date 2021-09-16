@@ -1,14 +1,14 @@
+import { Switch, Route } from "react-router-dom";
+
 import React from 'react';
 import Artikel from '../components/artikel';
 import Carousel from '../components/carousel';
 import Faqs from '../components/faqs';
-import Footer from '../components/footer';
 import Galeri from '../components/galeri';
 import Jurusan from '../components/jurusan';
 import OutputSiswa from '../components/outputsiswa';
 import Sambutan from '../components/sambutan';
 import StafPengajar from '../components/stafpengajar';
-import TopBar from '../components/topbar';
 import Video from '../components/video';
 
 function Home() {
