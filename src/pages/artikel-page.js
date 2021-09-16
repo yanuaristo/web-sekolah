@@ -1,4 +1,4 @@
-export default function Artikel() {
+export default function ArtikelPage() {
     return (
         <div>
             Berita Artikel

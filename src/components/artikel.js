@@ -10,15 +10,15 @@ export default function Artikel() {
                         <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                             <div className="blog-item">
                                 <div className="blog-img">
-                                    <img src="img/blog-1.jpg" alt="Image" />
+                                    <img src="img/blog-1.jpg" alt="Artikel" />
                                 </div>
                                 <div className="blog-title">
                                     <h3>Kunjungan ke Bernardi Factory</h3>
-                                    <a className="btn" href="">+</a>
+                                    <a className="btn" href>+</a>
                                 </div>
                                 <div className="blog-meta">
-                                    <p>Oleh<a href="">Admin</a></p>
-                                    <p>dalam<a href="">Kesiswaan</a></p>
+                                    <p>Oleh<a href>Admin</a></p>
+                                    <p>dalam<a href>Kesiswaan</a></p>
                                 </div>
                                 <div className="blog-text">
                                     <p>
@@ -30,15 +30,15 @@ export default function Artikel() {
                         <div className="col-lg-4 col-md-6 wow fadeInUp">
                             <div className="blog-item">
                                 <div className="blog-img">
-                                    <img src="img/blog-2.jpg" alt="Image" />
+                                    <img src="img/blog-2.jpg" alt="Artikel" />
                                 </div>
                                 <div className="blog-title">
                                     <h3>Semangat Belajar UN</h3>
-                                    <a className="btn" href="">+</a>
+                                    <a className="btn" href>+</a>
                                 </div>
                                 <div className="blog-meta">
-                                    <p>By<a href="">Admin</a></p>
-                                    <p>In<a href="">Kesiswaan</a></p>
+                                    <p>By<a href>Admin</a></p>
+                                    <p>In<a href>Kesiswaan</a></p>
                                 </div>
                                 <div className="blog-text">
                                     <p>
@@ -50,15 +50,15 @@ export default function Artikel() {
                         <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                             <div className="blog-item">
                                 <div className="blog-img">
-                                    <img src="img/blog-3.jpg" alt="Image" />
+                                    <img src="img/blog-3.jpg" alt="Artikel" />
                                 </div>
                                 <div className="blog-title">
                                     <h3>Perakitan PC Gaming ?</h3>
-                                    <a className="btn" href="">+</a>
+                                    <a className="btn" href>+</a>
                                 </div>
                                 <div className="blog-meta">
-                                    <p>By<a href="">Admin</a></p>
-                                    <p>In<a href="">Ekstra Kurikuler</a></p>
+                                    <p>By<a href>Admin</a></p>
+                                    <p>In<a href>Ekstra Kurikuler</a></p>
                                 </div>
                                 <div className="blog-text">
                                     <p>

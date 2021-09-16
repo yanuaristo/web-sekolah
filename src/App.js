@@ -15,12 +15,14 @@ import FaqsPage from './pages/faqs-page';
 import Pertanyaan from './pages/pertanyaan';
 import Bantuan from './pages/bantuan';
 import SaranOrtu from './pages/saran-ortu';
-import Artikel from './pages/artikel';
+import ArtikelPage from './pages/artikel-page';
 // import './App.css';
 
 function App() {
 	return (
 		<Router>
+			<div className="wrapper">
+
 			<TopBar />
 			<Switch>
 				<Route path="/profil-sekolah" component={ProfilSekolah} />
@@ -30,7 +32,7 @@ function App() {
 				<Route path="/hubungan-industri" component={HubunganIndustri} />
 				<Route path="/prestasi-siswa" component={PrestasiSiswa} />
 				<Route path="/fasilitas" component={Fasilitas} />	
-				<Route path="/artikel" component={Artikel} />
+				<Route path="/artikel" component={ArtikelPage} />
 
 				<Route path="/profil-jurusan" component={ProfilJurusan} />	
 				<Route path="/ekstrakurikuler" component={Ekstrakurikuler} />
@@ -42,6 +44,8 @@ function App() {
 				<Route component={Home} />
 			</Switch>
 			<Footer />
+			</div>
+			
 		</Router>
 	);
 }

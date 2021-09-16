@@ -1,5 +1,3 @@
-import { Switch, Route } from "react-router-dom";
-
 import React from 'react';
 import Artikel from '../components/artikel';
 import Carousel from '../components/carousel';
@@ -50,7 +48,7 @@ function Home() {
 			<Artikel />
 			{/* <!-- Blog End --> */}
 
-			<a href="#" className="back-to-top">
+			<a href="#top" className="back-to-top">
 				<i className="fa fa-chevron-up" />
 			</a>
 		</div>

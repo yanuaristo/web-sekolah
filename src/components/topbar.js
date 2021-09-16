@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 
 export default function TopBar() {
 	return (
@@ -59,7 +59,7 @@ export default function TopBar() {
 			<div className="nav-bar">
 				<div className="container-fluid">
 					<nav className="navbar navbar-expand-lg bg-dark navbar-dark">
-						<a href="#" className="navbar-brand">
+						<a href="#child" className="navbar-brand">
 							MENU
 						</a>
 						<button
@@ -92,7 +92,7 @@ export default function TopBar() {
 									}}
 								/>
 								<div className="nav-item dropdown">
-									<a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">
+									<a href="#child" className="nav-link dropdown-toggle" data-toggle="dropdown">
 										Tentang Sekolah
 									</a>
 									<div className="dropdown-menu">
@@ -243,7 +243,7 @@ export default function TopBar() {
 									</div>
 								</div>
 								<div className="nav-item dropdown">
-									<a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">
+									<a href="#child" className="nav-link dropdown-toggle" data-toggle="dropdown">
 										Program
 									</a>
 									<div className="dropdown-menu">
@@ -286,7 +286,7 @@ export default function TopBar() {
 									</div>
 								</div>
 								<div className="nav-item dropdown">
-									<a href="#" className="nav-link dropdown-toggle" data-toggle="dropdown">
+									<a href="#child" className="nav-link dropdown-toggle" data-toggle="dropdown">
 										Hubungi Kami
 									</a>
 									<div className="dropdown-menu">
@@ -372,7 +372,7 @@ export default function TopBar() {
 								</a>
 							</div>
 							<div className="ml-auto">
-								<a className="btn" href="#">
+								<a className="btn" href="#/">
 									DAFTAR SEKARANG
 								</a>
 							</div>

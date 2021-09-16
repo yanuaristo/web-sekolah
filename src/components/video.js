@@ -36,6 +36,7 @@ export default function Video() {
 									id="video"
 									allowscriptaccess="always"
 									allow="autoplay"
+									title="video"
 								/>
 							</div>
 						</div>

@@ -16,19 +16,19 @@ export default function Footer() {
 								<i className="fa fa-envelope" />smkdiposda@gmail.com
 							</p>
 							<div className="footer-social">
-								<a href="">
+								<a href="#sosmed">
 									<i className="fab fa-twitter" />
 								</a>
-								<a href="">
+								<a href="#sosmed">
 									<i className="fab fa-facebook-f" />
 								</a>
-								<a href="">
+								<a href="#sosmed">
 									<i className="fab fa-youtube" />
 								</a>
-								<a href="">
+								<a href="#sosmed">
 									<i className="fab fa-instagram" />
 								</a>
-								<a href="">
+								<a href="#sosmed">
 									<i className="fab fa-linkedin-in" />
 								</a>
 							</div>
@@ -37,27 +37,27 @@ export default function Footer() {
 					<div className="col-md-6 col-lg-3">
 						<div className="footer-link">
 							<h2>Kegiatan Menarik</h2>
-							<a href="">Ekskul PMR</a>
-							<a href="">Ekskul Paskibraka</a>
-							<a href="">Ekskul Pramuka</a>
-							<a href="">Ekskul Drum Band</a>
-							<a href="">Ekskul Musik & Band</a>
+							<a href="#ekskul">Ekskul PMR</a>
+							<a href="#ekskul">Ekskul Paskibraka</a>
+							<a href="#ekskul">Ekskul Pramuka</a>
+							<a href="#ekskul">Ekskul Drum Band</a>
+							<a href="#ekskul">Ekskul Musik & Band</a>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div className="container footer-menu">
 				<div className="f-menu">
-					<a href="">Beranda</a>
-					<a href="">Hubungi Kami</a>
-					<a href="">E-Learning</a>
-					<a href="">PPDB</a>
+					<a href="/">Beranda</a>
+					<a href="/bantuan">Hubungi Kami</a>
+					<a href="#belajar">E-Learning</a>
+					<a href="#daftar">PPDB</a>
 				</div>
 			</div>
 			<div className="container copyright">
 				<div className="col-md-6">
 					<p>
-						&copy; <a href="#">smkdiponegorosda.sch.id</a>
+						&copy; <a href="/">smkdiponegorosda.sch.id</a>
 					</p>
 				</div>
 			</div>

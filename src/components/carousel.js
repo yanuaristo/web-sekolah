@@ -10,7 +10,7 @@ export default function Carousel() {
 			</ol>
 			<div className="carousel-inner">
 				<div className="carousel-item active">
-					<img src="img/carousel-1.jpg" alt="Carousel Image" />
+					<img src="img/carousel-1.jpg" alt="Carousel" />
 					<div className="carousel-caption">
 						<p className="animated fadeInRight">Berprestasi dalam</p>
 						<h1 className="animated fadeInLeft">Membentuk Karakter Siswa</h1>
@@ -24,7 +24,7 @@ export default function Carousel() {
 				</div>
 
 				<div className="carousel-item">
-					<img src="img/carousel-2.jpg" alt="Carousel Image" />
+					<img src="img/carousel-2.jpg" alt="Carousel" />
 					<div className="carousel-caption">
 						<p className="animated fadeInRight">Gedung Sekolah</p>
 						<h1 className="animated fadeInLeft">Berfasilitas Lengkap</h1>
@@ -38,7 +38,7 @@ export default function Carousel() {
 				</div>
 
 				<div className="carousel-item">
-					<img src="img/carousel-3.jpg" alt="Carousel Image" />
+					<img src="img/carousel-3.jpg" alt="Carousel" />
 					<div className="carousel-caption">
 						<p className="animated fadeInRight">Dukungan Penuh Pada</p>
 						<h1 className="animated fadeInLeft">Bakat Putra-Putri Anda</h1>
@@ -52,7 +52,7 @@ export default function Carousel() {
 				</div>
 
 				<div className="carousel-item">
-					<img src="img/carousel-4.jpg" alt="Carousel Image" />
+					<img src="img/carousel-4.jpg" alt="Carousel" />
 					<div className="carousel-caption">
 						<p className="animated fadeInRight">Membimbing Siswa</p>
 						<h1 className="animated fadeInLeft">Unggul dalam DU/DI</h1>
@@ -65,7 +65,7 @@ export default function Carousel() {
 					</div>
 				</div>
 				<div className="carousel-item">
-					<img src="img/carousel-5.jpg" alt="Carousel Image" />
+					<img src="img/carousel-5.jpg" alt="Carousel" />
 					<div className="carousel-caption">
 						<p className="animated fadeInRight">Membentuk Pribadi Siswa</p>
 						<h1 className="animated fadeInLeft">berkarakter dan Bertaqwa</h1>
