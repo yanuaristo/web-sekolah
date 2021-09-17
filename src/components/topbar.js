@@ -364,10 +364,10 @@ export default function TopBar() {
 										/>
 									</div>
 								</div>
-								<a href="contact.html" className="nav-item nav-link">
+								<a href="#/" className="nav-item nav-link">
 									E-Learning
 								</a>
-								<a href="contact.html" className="nav-item nav-link">
+								<a href="#/" className="nav-item nav-link">
 									PPDB
 								</a>
 							</div>
