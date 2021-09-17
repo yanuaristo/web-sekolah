@@ -48,9 +48,6 @@ function Home() {
 			<Artikel />
 			{/* <!-- Blog End --> */}
 
-			<a href="#top" className="back-to-top">
-				<i className="fa fa-chevron-up" />
-			</a>
 		</div>
 	);
 }

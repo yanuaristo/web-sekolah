@@ -13,7 +13,7 @@ export default function Footer() {
 								<i className="fa fa-phone-alt" />031 89 470 40
 							</p>
 							<p>
-								<i className="fa fa-envelope" />smkdiposda@gmail.com
+								<i className="fa fa-envelope" />smk.diponegoro.sda@gmail.com
 							</p>
 							<div className="footer-social">
 								<a href="#sosmed">

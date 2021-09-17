@@ -1,3 +1,5 @@
+import { Route } from 'react-router-dom';
+
 export default function StafPengajar() {
     return (
         <div className="team">
@@ -75,6 +77,24 @@ export default function StafPengajar() {
                                 </div>
                             </div>
                         </div>
+                            <Route
+									path="/"
+									exact
+									children={({ match, history }) => {
+										return (
+											<a
+												href="/staf-pengajar"
+												className="btn btn-warning col text-center"
+												selected={match ? true : false}
+												onClick={() => {
+													history.push('/staf-pengajar');
+												}}
+											>
+												Selengkapnya
+											</a>
+										);
+									}}
+								/>    
                     </div>
                 </div>
             </div>

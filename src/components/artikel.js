@@ -1,3 +1,5 @@
+import { Route } from 'react-router-dom';
+
 export default function Artikel() {
     return (
         <div className="blog">
@@ -67,6 +69,24 @@ export default function Artikel() {
                                 </div>
                             </div>
                         </div>
+                        <Route
+									path="/"
+									exact
+									children={({ match, history }) => {
+										return (
+											<a
+												href="/artikel"
+												className="btn btn-warning col text-center"
+												selected={match ? true : false}
+												onClick={() => {
+													history.push('/artikel');
+												}}
+											>
+												Selengkapnya
+											</a>
+										);
+									}}
+								/> 
                     </div>
                 </div>
             </div>

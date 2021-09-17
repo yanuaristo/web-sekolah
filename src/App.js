@@ -16,6 +16,7 @@ import Pertanyaan from './pages/pertanyaan';
 import Bantuan from './pages/bantuan';
 import SaranOrtu from './pages/saran-ortu';
 import ArtikelPage from './pages/artikel-page';
+import StafPengajarPage from './pages/stafpengajar-page';
 // import './App.css';
 
 function App() {
@@ -40,10 +41,16 @@ function App() {
 				<Route path="/faqs" component={FaqsPage} />
 				<Route path="/pertanyaan" component={Pertanyaan} />
 				<Route path="/bantuan" component={Bantuan} />
-				<Route path="/saran-orang-tua" component={SaranOrtu} />						
+				<Route path="/saran-orang-tua" component={SaranOrtu} />	
+
+				<Route path="/staf-pengajar" component={StafPengajarPage} />					
 				<Route component={Home} />
 			</Switch>
 			<Footer />
+			
+			<a href="#top" className="back-to-top">
+				<i className="fa fa-chevron-up" />
+			</a>
 			</div>
 			
 		</Router>

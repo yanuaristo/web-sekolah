@@ -54,7 +54,7 @@ export default function Pertanyaan() {
 									<p className="help-block text-danger" />
 								</div>
 								<div>
-									<button className="btn btn-success" type="submit" id="sendMessageButton">
+									<button className="btn btn-success btn-block" type="submit" id="sendMessageButton">
 										Kirim
 									</button>
 								</div>
