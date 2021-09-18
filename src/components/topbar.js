@@ -8,7 +8,7 @@ export default function TopBar() {
 					<div className="row align-items-center">
 						<div className="col-lg-4 col-md-12">
 							<div className="logo">
-								<a href="index.html">
+								<a href="/">
 									<img src="img/headlogo.png" alt="Logo" />
 								</a>
 							</div>

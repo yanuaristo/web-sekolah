@@ -5,7 +5,7 @@ export default function Sambutan() {
 				<div className="row align-items-center">
 					<div className="col-lg-5 col-md-6">
 						<div className="about-img">
-							<img src="img/about.jpg" alt="Kepsek" />
+							<img src="img/about.jpeg" alt="Kepsek" />
 						</div>
 					</div>
 					<div className="col-lg-7 col-md-6">
@@ -23,9 +23,9 @@ export default function Sambutan() {
 								memberi pelayanan informasi secara cepat, jelas, dan akuntable. Dari layanan ini pula,
 								sekolah siap menerima saran dari semua pihak yang akhirnya dapat menjawab Kebutuhan
 								masyarakat. <br />
-								<i>- Drs. Edi, Mpd</i>
+								<i>- Mochammad Fuad Nadjib, M. Pd.</i>
 							</p>
-							<a className="btn" href="#all">
+							<a className="btn" href="/profil-sekolah">
 								Selengkapnya
 							</a>
 						</div>

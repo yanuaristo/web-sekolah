@@ -16,7 +16,7 @@ import Pertanyaan from './pages/pertanyaan';
 import Bantuan from './pages/bantuan';
 import SaranOrtu from './pages/saran-ortu';
 import ArtikelPage from './pages/artikel-page';
-import StafPengajarPage from './pages/stafpengajar-page';
+import StafPengajarPage from './pages/stafpengajar-page/index';
 // import './App.css';
 
 function App() {
