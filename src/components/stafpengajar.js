@@ -12,7 +12,7 @@ export default function StafPengajar() {
                         <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                             <div className="team-item">
                                 <div className="team-img">
-                                    <img src="img/about.jpg" alt="Team" />
+                                    <img src="img/about.jpeg" alt="Team" />
                                 </div>
                                 <div className="team-text">
                                     <h2>Achmad Mursyidi, S. Pd.</h2>
@@ -29,7 +29,7 @@ export default function StafPengajar() {
                         <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                             <div className="team-item">
                                 <div className="team-img">
-                                    <img src="img/about.jpg" alt="Team" />
+                                    <img src="img/about.jpeg" alt="Team" />
                                 </div>
                                 <div className="team-text">
                                     <h2>Marinanti Budiarti, S. Pd.</h2>
@@ -46,7 +46,7 @@ export default function StafPengajar() {
                         <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                             <div className="team-item">
                                 <div className="team-img">
-                                    <img src="img/about.jpg" alt="Team" />
+                                    <img src="img/about.jpeg" alt="Team" />
                                 </div>
                                 <div className="team-text">
                                     <h2>Syamsul Ma'arif, S. Kom.</h2>
@@ -63,7 +63,7 @@ export default function StafPengajar() {
                         <div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                             <div className="team-item">
                                 <div className="team-img">
-                                    <img src="img/about.jpg" alt="Team" />
+                                    <img src="img/about.jpeg" alt="Team" />
                                 </div>
                                 <div className="team-text">
                                     <h2>Minhajul Abidin, S. Kom.</h2>
