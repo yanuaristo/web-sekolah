@@ -15,7 +15,7 @@ import FaqsPage from './pages/faqs-page';
 import Pertanyaan from './pages/pertanyaan';
 import Bantuan from './pages/bantuan';
 import SaranOrtu from './pages/saran-ortu';
-import ArtikelPage from './pages/artikel-page';
+import ArtikelPage from './pages/artikel-page/index';
 import StafPengajarPage from './pages/stafpengajar-page/index';
 // import './App.css';
 
@@ -23,36 +23,50 @@ function App() {
 	return (
 		<Router>
 			<div className="wrapper">
+				{/* <div
+					id="spinner"
+					className="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+				>
+					<div
+						className="spinner-border text-primary d-flex align-items-center justify-content-center"
+						style={{ width: '5rem', height: '5rem' }}
+						role="status"
+					>
+						<div
+							className="spinner-border text-primary"
+							style={{ width: '3rem', height: '3rem' }}
+							role="status"
+						/>
+					</div>
+				</div> */}
+				<TopBar />
+				<Switch>
+					<Route path="/profil-sekolah" component={ProfilSekolah} />
+					<Route path="/visi-misi" component={VisiMisi} />
+					<Route path="/struktur-organisasi" component={SOTK} />
+					<Route path="/akreditasi" component={Akreditasi} />
+					<Route path="/hubungan-industri" component={HubunganIndustri} />
+					<Route path="/prestasi-siswa" component={PrestasiSiswa} />
+					<Route path="/fasilitas" component={Fasilitas} />
+					<Route path="/artikel" component={ArtikelPage} />
 
-			<TopBar />
-			<Switch>
-				<Route path="/profil-sekolah" component={ProfilSekolah} />
-				<Route path="/visi-misi" component={VisiMisi} />
-				<Route path="/struktur-organisasi" component={SOTK} />
-				<Route path="/akreditasi" component={Akreditasi} />
-				<Route path="/hubungan-industri" component={HubunganIndustri} />
-				<Route path="/prestasi-siswa" component={PrestasiSiswa} />
-				<Route path="/fasilitas" component={Fasilitas} />	
-				<Route path="/artikel" component={ArtikelPage} />
+					<Route path="/profil-jurusan" component={ProfilJurusan} />
+					<Route path="/ekstrakurikuler" component={Ekstrakurikuler} />
 
-				<Route path="/profil-jurusan" component={ProfilJurusan} />	
-				<Route path="/ekstrakurikuler" component={Ekstrakurikuler} />
+					<Route path="/faqs" component={FaqsPage} />
+					<Route path="/pertanyaan" component={Pertanyaan} />
+					<Route path="/bantuan" component={Bantuan} />
+					<Route path="/saran-orang-tua" component={SaranOrtu} />
 
-				<Route path="/faqs" component={FaqsPage} />
-				<Route path="/pertanyaan" component={Pertanyaan} />
-				<Route path="/bantuan" component={Bantuan} />
-				<Route path="/saran-orang-tua" component={SaranOrtu} />	
+					<Route path="/staf-pengajar" component={StafPengajarPage} />
+					<Route component={Home} />
+				</Switch>
+				<Footer />
 
-				<Route path="/staf-pengajar" component={StafPengajarPage} />					
-				<Route component={Home} />
-			</Switch>
-			<Footer />
-			
-			<a href="#top" className="back-to-top">
-				<i className="fa fa-chevron-up" />
-			</a>
+				<a href="#top" className="back-to-top">
+					<i className="fa fa-chevron-up" />
+				</a>
 			</div>
-			
 		</Router>
 	);
 }

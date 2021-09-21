@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
-import CardStafPengajar from '../../components/card-stafpengajar';
+import CardArtikel from '../../components/card-artikel';
 
-export default function StafPengajarGrid() {
+export default function ArtikelGrid() {
 	const history = useHistory();
 	const [ error, setError ] = React.useState('');
 	const [ data, setData ] = useState([]);
@@ -14,7 +14,7 @@ export default function StafPengajarGrid() {
 
 	const getData = async () => {
 		try {
-			await axios.get('https://jsonplaceholder.typicode.com/users?_start=0&_limit=10').then((response) => {
+			await axios.get('https://jsonplaceholder.typicode.com/posts?_start=0&_limit=10').then((response) => {
 				console.log('data',response.data);
 				setData(response.data);
 			});
@@ -27,7 +27,7 @@ export default function StafPengajarGrid() {
 
 	const handleClick = (id) => {
 		return (event) => {
-			history.push(`/staf-pengajar/detail/${id}`);
+			history.push(`/artikel/detail/${id}`);
 		};
 	};
 
@@ -35,18 +35,18 @@ export default function StafPengajarGrid() {
 		return <p>ERROR: {error}</p>;
 	}
 
-	// console.log('datanya',data)
+	console.log('datanya',data)
 	return (
-		<div className="about wow fadeInUp team">
+		<div className="about wow fadeInUp blog">
 			<div className="container">
 				<div className="section-header text-center">
-					<h2>Staff Pengajar</h2>
+					<h2>Berita Artikel</h2>
 				</div>
 				<div className="row">
 					{data.map((element) => (
-						<div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+						<div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
 							<span onClick={handleClick(element.id)}>
-								<CardStafPengajar key={element.id} nama={element.name} nip={element.email} />
+								<CardArtikel key={element.id} judul={element.title} isi={element.body} />
 							</span>
 						</div>
 					))}
