@@ -52,7 +52,7 @@ export default function Carousel() {
 				</div>
 
 				<div className="carousel-item">
-					<img src="img/carousel-4.jpg" alt="Carousel" />
+					<img src="img/carousel-4.JPG" alt="Carousel" />
 					<div className="carousel-caption">
 						<p className="animated fadeInRight">Membimbing Siswa</p>
 						<h1 className="animated fadeInLeft">Unggul dalam DU/DI</h1>
@@ -65,7 +65,7 @@ export default function Carousel() {
 					</div>
 				</div>
 				<div className="carousel-item">
-					<img src="img/carousel-5.jpg" alt="Carousel" />
+					<img src="img/carousel-5.JPG" alt="Carousel" />
 					<div className="carousel-caption">
 						<p className="animated fadeInRight">Membentuk Pribadi Siswa</p>
 						<h1 className="animated fadeInLeft">berkarakter dan Bertaqwa</h1>
