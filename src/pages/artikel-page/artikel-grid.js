@@ -14,9 +14,12 @@ export default function ArtikelGrid() {
 
 	const getData = async () => {
 		try {
-			await axios.get('https://jsonplaceholder.typicode.com/posts?_start=0&_limit=10').then((response) => {
-				console.log('data',response.data);
-				setData(response.data);
+			await axios.get('https://smkdiponegorosda.sch.id/api_smk/artikel').then((response) => {
+				if (response.data.status === 200) {
+					setData(response.data.data);
+				} else {
+					setError('Data Tidak ada');
+				}
 			});
 		} catch (e) {
 			if (e) {
@@ -35,7 +38,7 @@ export default function ArtikelGrid() {
 		return <p>ERROR: {error}</p>;
 	}
 
-	console.log('datanya',data)
+	console.log('datanya', data);
 	return (
 		<div className="about wow fadeInUp blog">
 			<div className="container">
@@ -46,7 +49,15 @@ export default function ArtikelGrid() {
 					{data.map((element) => (
 						<div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
 							<span onClick={handleClick(element.id)}>
-								<CardArtikel key={element.id} judul={element.title} isi={element.body} />
+								<CardArtikel
+									key={element.id}
+									judul={element.judul}
+									isi={element.isi_artikel}
+									gambar={element.image}
+									kategori={element.kategori}
+									tgl={element.tgl}
+									pembuat={element.user_pembuat}
+								/>
 							</span>
 						</div>
 					))}

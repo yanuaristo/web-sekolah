@@ -14,9 +14,12 @@ export default function StafPengajarGrid() {
 
 	const getData = async () => {
 		try {
-			await axios.get('https://jsonplaceholder.typicode.com/users?_start=0&_limit=10').then((response) => {
-				console.log('data',response.data);
-				setData(response.data);
+			await axios.get('https://smkdiponegorosda.sch.id/api_smk/pengajar').then((response) => {
+				if(response.data.status === 200){
+					setData(response.data.data);
+				} else {
+					setError("Data Tidak ada")
+				}
 			});
 		} catch (e) {
 			if (e) {
@@ -25,6 +28,8 @@ export default function StafPengajarGrid() {
 		}
 	};
 
+	console.log('cek_error',error);
+	
 	const handleClick = (id) => {
 		return (event) => {
 			history.push(`/staf-pengajar/detail/${id}`);
@@ -46,7 +51,7 @@ export default function StafPengajarGrid() {
 					{data.map((element) => (
 						<div className="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
 							<span onClick={handleClick(element.id)}>
-								<CardStafPengajar key={element.id} nama={element.name} nip={element.email} />
+								<CardStafPengajar key={element.id} nama={element.nama_guru} mapel={element.mata_pelajaran} foto={element.foto} linkedin={element.linkedin} facebook={element.facebook} twitter={element.twitter} instagram={element.instagram} />
 							</span>
 						</div>
 					))}

@@ -1,9 +1,11 @@
+import parse from 'html-react-parser'
+
 export default function CardArtikel(props) {
 	return (
 		<div>
 			<div className="blog-item">
 				<div className="blog-img">
-					<img src="img/blog-1.jpg" alt="Artikel" />
+					<img src="img/blog-1.jpg" alt={props.judul} />
 				</div>
 				<div className="blog-title">
 					<h3>{props.judul}</h3>
@@ -13,14 +15,14 @@ export default function CardArtikel(props) {
 				</div>
 				<div className="blog-meta">
 					<p>
-						Oleh<a href>Admin</a>
+						By<a href>{props.pembuat}</a>
 					</p>
 					<p>
-						dalam<a href>Kesiswaan</a>
+						dalam kategori<a href>{props.kategori}</a>
 					</p>
 				</div>
 				<div className="blog-text">
-					<p>{props.isi}</p>
+					{parse(props.isi)}
 				</div>
 			</div>
 		</div>
