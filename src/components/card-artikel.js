@@ -1,11 +1,14 @@
 import parse from 'html-react-parser'
 
 export default function CardArtikel(props) {
+	
+	console.log(props.gambar)
 	return (
 		<div>
 			<div className="blog-item">
 				<div className="blog-img">
-					<img src="img/blog-1.jpg" alt={props.judul} />
+					<img src={props.gambar} />
+					{/* <img src="img/blog-1.jpg" alt={props.judul} /> */}
 				</div>
 				<div className="blog-title">
 					<h3>{props.judul}</h3>
