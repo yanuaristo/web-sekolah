@@ -28,6 +28,8 @@ export default function ArtikelGrid() {
 		}
 	};
 
+	console.log('data',data)
+
 	const handleClick = (id) => {
 		return (event) => {
 			history.push(`/artikel/detail/${id}`);
