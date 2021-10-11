@@ -4,7 +4,7 @@ export default function CardStafPengajar(props) {
 			<div className="team-item btn">
 				<div className="team-img">
 					{props.foto === '-' ? 
-						<img src='img/about.jpg' alt="Team" /> :
+						<img src='img/no-photo.jpg' alt="Team" /> :
 						<img src={props.foto} alt={props.nama} />
 					}
 				</div>
