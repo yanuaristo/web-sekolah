@@ -10,57 +10,35 @@ import {
 } from 'react-share';
 
 import { FacebookIcon, TwitterIcon, WhatsappIcon } from 'react-share';
-import AppPageLoading from '../../components/AppPageLoading';
 
 export default function ArtikelDetail({ match }) {
 	const [ error, setError ] = React.useState('');
 	const [ data, setData ] = useState([]);
-	const [ loading, setLoading ] = useState(true);
 
 	useEffect(() => {
-		async function getData(){
+		const getData = async () => {
 			try {
-				  setLoading(true);
+				//   setLoading(true);
 				await axios
 					.get(`https://smkdiponegorosda.sch.id/api_smk/artikel/detail/${match.params.id}`)
 					.then((response) => {
 						console.log('data', response.data.data);
 						setData(response.data.data);
-						setLoading(false);
+						// setLoading(false);
 					});
 			} catch (e) {
 				if (e) {
 					setError('Data Tidak ada');
 				}
 			}
-		}
-		
+		};
 		getData();
 	}, [match.params.id]);
 
-	// const getData = async () => {
-	// 	try {
-	// 		//   setLoading(true);
-	// 		await axios
-	// 			.get(`https://smkdiponegorosda.sch.id/api_smk/artikel/detail/${match.params.id}`)
-	// 			.then((response) => {
-	// 				console.log('data', response.data.data);
-	// 				setData(response.data.data);
-	// 				// setLoading(false);
-	// 			});
-	// 	} catch (e) {
-	// 		if (e) {
-	// 			setError('Data Tidak ada');
-	// 		}
-	// 	}
-	// };
+	
 
 	if (error !== '') {
 		return <p>ERROR: {error}</p>;
-	}
-
-	if (loading) {
-		return <AppPageLoading />
 	}
 
 	return (
