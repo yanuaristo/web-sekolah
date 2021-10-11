@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Route, useHistory } from 'react-router-dom';
 import CardArtikel from './card-artikel';
+import AppLoading from './AppLoading';
 
 export default function Artikel() {
 	const history = useHistory();
 	const [ error, setError ] = React.useState('');
 	const [ data, setData ] = useState([]);
+	const [ loading, setLoading ] = useState(true);
 
 	useEffect(() => {
 		getData();
@@ -14,9 +16,11 @@ export default function Artikel() {
 
 	const getData = async () => {
 		try {
+			setLoading(true);
 			await axios.get('https://smkdiponegorosda.sch.id/api_smk/artikel').then((response) => {
 				if (response.data.status === 200) {
 					setData(response.data.data);
+					setLoading(false);
 				} else {
 					setError('Data Tidak ada');
 				}
@@ -36,6 +40,10 @@ export default function Artikel() {
 
 	if (error !== '') {
 		return <p>ERROR: {error}</p>;
+	}
+
+	if (loading) {
+		return <AppLoading />
 	}
 
 	return (

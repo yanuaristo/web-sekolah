@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import CardArtikel from '../../components/card-artikel';
+import AppPageLoading from '../../components/AppPageLoading';
 
 export default function ArtikelGrid() {
 	const history = useHistory();
 	const [ error, setError ] = React.useState('');
 	const [ data, setData ] = useState([]);
+	const [ loading, setLoading ] = useState(true);
 
 	useEffect(() => {
 		getData();
@@ -14,9 +16,11 @@ export default function ArtikelGrid() {
 
 	const getData = async () => {
 		try {
+			setLoading(true);
 			await axios.get('https://smkdiponegorosda.sch.id/api_smk/artikel').then((response) => {
 				if (response.data.status === 200) {
 					setData(response.data.data);
+					setLoading(false);
 				} else {
 					setError('Data Tidak ada');
 				}
@@ -40,7 +44,10 @@ export default function ArtikelGrid() {
 		return <p>ERROR: {error}</p>;
 	}
 
-	console.log('datanya', data);
+	if (loading) {
+		return <AppPageLoading />
+	}
+
 	return (
 		<div className="about wow fadeInUp blog">
 			<div className="container">

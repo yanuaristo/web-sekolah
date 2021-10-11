@@ -1,22 +1,34 @@
-import React,{useState,useEffect} from "react"
-import axios from "axios";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
-export default function ArtikelDetail({match}) {
-    const [error, setError] = React.useState("");
-	const [data, setData] = useState([])
-    
-    useEffect(() => {
+import parse from 'html-react-parser';
+
+import {
+	FacebookShareButton,
+	TwitterShareButton,
+	WhatsappShareButton
+} from 'react-share';
+
+import { FacebookIcon, TwitterIcon, WhatsappIcon } from 'react-share';
+
+export default function ArtikelDetail({ match }) {
+	const [ error, setError ] = React.useState('');
+	const [ data, setData ] = useState([]);
+
+	useEffect(() => {
 		getData();
-	});
+	}, []);
 
 	const getData = async () => {
 		try {
 			//   setLoading(true);
-			await axios.get(`https://jsonplaceholder.typicode.com/posts/${match.params.id}`).then((response) => {
-				console.log('data', response);
-				setData(response.data);
-				// setLoading(false);
-			});
+			await axios
+				.get(`https://smkdiponegorosda.sch.id/api_smk/artikel/detail/${match.params.id}`)
+				.then((response) => {
+					console.log('data', response.data.data);
+					setData(response.data.data);
+					// setLoading(false);
+				});
 		} catch (e) {
 			if (e) {
 				setError('Data Tidak ada');
@@ -24,25 +36,50 @@ export default function ArtikelDetail({match}) {
 		}
 	};
 
-    if (error !== '') {
+	if (error !== '') {
 		return <p>ERROR: {error}</p>;
 	}
 
-    return (
-        <div className="single">
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-8">
-                        <div className="single-content wow fadeInUp">
-                          <img src={`https://robohash.org/${match.params.id}`} alt="Gambar" />
-                          <h2>{data.title}</h2>
-                          <p>{data.body}</p>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    )
+	return (
+		<div className="single">
+			<div className="container">
+				<div className="row">
+					<div className="col-lg-8">
+						<div className="single-content wow fadeInUp">
+							<img src={data.image} alt="Gambar" />
+							<h2>{data.judul}</h2>
+							{parse(`${data.isi_artikel}`)}
+						</div>
+						<div>
+							<p>Bagikan</p>
+						</div>
+						<div class="single-tags wow fadeInUp">
+							<FacebookShareButton
+								url={`https://smkdiponegorosda.sch.id/artikel/detail/${match.params.id}`}
+								quote={data.judul}
+								hashtag={'#smkdiponegorosidoarjo'}
+								description={'aiueoffff'}
+							>
+								<FacebookIcon size={32} round/>
+							</FacebookShareButton>
+							<TwitterShareButton
+								title={data.judul}
+								url={`https://smkdiponegorosda.sch.id/artikel/detail/${match.params.id}`}
+								hashtags={[ 'smkdiponegorosda', 'smkbisa','sekolahsidoarjo' ]}
+							>
+								<TwitterIcon size={32} round/>
+							</TwitterShareButton>
+							<WhatsappShareButton
+								title={data.judul}
+								url={`https://smkdiponegorosda.sch.id/artikel/detail/${match.params.id}`}
+								separator={'	'}
+							>
+								<WhatsappIcon size={32} round/>
+							</WhatsappShareButton>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 }
