@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Route,useHistory } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import axios from 'axios';
 import CardStafPengajar from './card-stafpengajar';
 import AppLoading from './AppLoading';
 
 export default function StafPengajar() {
-	const history = useHistory();
+	// const history = useHistory();
     const [ error, setError ] = React.useState('');
 	const [ data, setData ] = useState([]);
 	const [ loading, setLoading ] = useState(true);
@@ -34,7 +34,7 @@ export default function StafPengajar() {
 
 	const handleClick = (id) => {
 		return (event) => {
-			history.push(`/staf-pengajar/detail/${id}`);
+			// history.push(`/staf-pengajar/detail/${id}`);
 		};
 	};
 

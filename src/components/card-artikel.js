@@ -7,8 +7,12 @@ export default function CardArtikel(props) {
 		<div>
 			<div className="blog-item">
 				<div className="blog-img">
-					<img src={props.gambar} alt={props.judul}/>
+					{/* <img src={props.gambar} alt={props.judul}/> */}
 					{/* <img src="img/blog-2.jpg" alt={props.judul} /> */}
+					{props.gambar === '-' ? 
+						<img src='img/no_image.jpg' alt="Team" /> :
+						<img src={props.gambar} alt={props.judul} />
+					}
 				</div>
 				<div className="blog-title">
 					<h3>{props.judul}</h3>

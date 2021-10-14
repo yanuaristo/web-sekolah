@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import CardStafPengajar from '../../components/card-stafpengajar';
 import AppPageLoading from '../../components/AppPageLoading';
 
 export default function StafPengajarGrid() {
-	const history = useHistory();
+	// const history = useHistory();
 	const [ error, setError ] = React.useState('');
 	const [ data, setData ] = useState([]);
 	const [ loading, setLoading ] = useState(true);
@@ -34,7 +34,7 @@ export default function StafPengajarGrid() {
 	
 	const handleClick = (id) => {
 		return (event) => {
-			history.push(`/staf-pengajar/detail/${id}`);
+			// history.push(`/staf-pengajar/detail/${id}`);
 		};
 	};
 
