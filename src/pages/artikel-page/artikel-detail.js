@@ -4,8 +4,9 @@ import axios from 'axios';
 import parse from 'html-react-parser';
 
 import { FacebookShareButton, TwitterShareButton, WhatsappShareButton } from 'react-share';
-
 import { FacebookIcon, TwitterIcon, WhatsappIcon } from 'react-share';
+import Disqus from 'disqus-react';
+
 import AppPageLoading from '../../components/AppPageLoading';
 
 export default function ArtikelDetail({ match }) {
@@ -35,6 +36,13 @@ export default function ArtikelDetail({ match }) {
 		},
 		[ match.params.id ]
 	);
+
+	const disqusShortname = 'smkdiponegorosda-sch-id-1';
+	const disqusConfig = {
+		url: `https://smkdiponegorosda.sch.id/artikel/detail${match.params.id}`,
+		identifier: match.params.id,
+		title: data.judul
+	};
 
 	if (error !== '') {
 		return <p>ERROR: {error}</p>;
@@ -93,6 +101,7 @@ export default function ArtikelDetail({ match }) {
 								<WhatsappIcon size={32} round />
 							</WhatsappShareButton>
 						</div>
+						{/* <Disqus.DiscussionEmbed shortname={disqusShortname} config={disqusConfig} /> */}
 					</div>
 					{/* <div className="col-lg-4">
 						<div className="sidebar">
