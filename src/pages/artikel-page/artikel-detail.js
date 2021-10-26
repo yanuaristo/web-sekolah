@@ -5,7 +5,7 @@ import parse from 'html-react-parser';
 
 import { FacebookShareButton, TwitterShareButton, WhatsappShareButton } from 'react-share';
 import { FacebookIcon, TwitterIcon, WhatsappIcon } from 'react-share';
-import Disqus from 'disqus-react';
+// import Disqus from 'disqus-react';
 
 import AppPageLoading from '../../components/AppPageLoading';
 
@@ -37,12 +37,12 @@ export default function ArtikelDetail({ match }) {
 		[ match.params.id ]
 	);
 
-	const disqusShortname = 'smkdiponegorosda-sch-id-1';
-	const disqusConfig = {
-		url: `https://smkdiponegorosda.sch.id/artikel/detail${match.params.id}`,
-		identifier: match.params.id,
-		title: data.judul
-	};
+	// const disqusShortname = 'smkdiponegorosda-sch-id-1';
+	// const disqusConfig = {
+	// 	url: `https://smkdiponegorosda.sch.id/artikel/detail${match.params.id}`,
+	// 	identifier: match.params.id,
+	// 	title: data.judul
+	// };
 
 	if (error !== '') {
 		return <p>ERROR: {error}</p>;
