@@ -2,7 +2,10 @@ import parse from 'html-react-parser'
 
 export default function CardArtikel(props) {
 	
-	console.log(props.gambar)
+	const text = props.isi
+	// console.log(text)
+	const textpotong = text.slice(0, 100)
+	console.log(textpotong)
 	return (
 		<div>
 			<div className="blog-item">
@@ -29,7 +32,7 @@ export default function CardArtikel(props) {
 					</p>
 				</div>
 				<div className="blog-text">
-					{parse(props.isi)}
+					{parse(props.isi.slice(0,150))}
 				</div>
 			</div>
 		</div>

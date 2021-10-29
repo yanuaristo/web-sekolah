@@ -3,7 +3,7 @@ import Footer from './components/footer';
 import Akreditasi from './pages/akreditasi';
 import Fasilitas from './pages/fasilitas';
 import TopBar from './components/topbar';
-import Home from './pages/Home';
+import Home from './pages/home-page/Home';
 import HubunganIndustri from './pages/hubungan-industri';
 import PrestasiSiswa from './pages/prestasi';
 import ProfilSekolah from './pages/profil-sekolah';
