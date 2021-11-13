@@ -1,4 +1,45 @@
+import React, { useState, useEffect } from 'react';
+import { Route } from 'react-router-dom';
+import axios from 'axios';
+
+import CardGaleri from '../../components/card-galeri';
+import AppLoading from '../../components/AppLoading';
+
 export default function Galeri() {
+	const [ error, setError ] = React.useState('');
+	const [ data, setData ] = useState([]);
+	const [ loading, setLoading ] = useState(true);
+
+	useEffect(() => {
+		getData();
+	}, []);
+
+	const getData = async () => {
+		try {
+			setLoading(true);
+			await axios.get('https://smkdiponegorosda.sch.id/api_smk/galeri').then((response) => {
+				if (response.data.status === 200) {
+					setData(response.data.data);
+					setLoading(false);
+				} else {
+					setError('Data Tidak ada');
+				}
+			});
+		} catch (e) {
+			if (e) {
+				setError('Gagal Ambil Data');
+			}
+		}
+	};
+
+	if (error !== '') {
+		return <p>ERROR: {error}</p>;
+	}
+
+	if (loading) {
+		return <AppLoading />;
+	}
+
 	return (
 		<div className="service">
 			<div className="container">
@@ -7,7 +48,17 @@ export default function Galeri() {
 					<h2>Kegiatan Siswa</h2>
 				</div>
 				<div className="row">
-					<div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+					{data
+						.slice(0, 6)
+						.map((element) => (
+							<CardGaleri
+								key={element.id}
+								judul={element.judul}
+								foto={element.image}
+								keterangan={element.isi}
+							/>
+						))}
+					{/* <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
 						<div className="service-item">
 							<div className="service-img">
 								<img src="img/service-1.jpg" alt="Galeri" />
@@ -22,88 +73,27 @@ export default function Galeri() {
 								</a>
 							</div>
 						</div>
-					</div>
-					<div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-						<div className="service-item">
-							<div className="service-img">
-								<img src="img/service-2.jpg" alt="Galeri" />
-								<div className="service-overlay">
-									<p>Juara 3 Karate Tingkat Jawa Timur</p>
-								</div>
-							</div>
-							<div className="service-text">
-								<h3>Bela Diri Karate</h3>
-								<a className="btn" href="img/service-2.jpg" data-lightbox="service">
-									+
-								</a>
-							</div>
-						</div>
-					</div>
-					<div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-						<div className="service-item">
-							<div className="service-img">
-								<img src="img/service-3.jpg" alt="Galeri" />
-								<div className="service-overlay">
-									<p>Aksi Pasukan Pengibar Bendera Pusaka dalam Kompetisi Paskibraka Provinsi 2019</p>
-								</div>
-							</div>
-							<div className="service-text">
-								<h3>Paskibraka</h3>
-								<a className="btn" href="img/service-3.jpg" data-lightbox="service">
-									+
-								</a>
-							</div>
-						</div>
-					</div>
-					<div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-						<div className="service-item">
-							<div className="service-img">
-								<img src="img/service-4.jpg" alt="Galeri" />
-								<div className="service-overlay">
-									<p>Grup Drum Band Gema Gita Smedia dengan berbagai piala yang pernah diraih</p>
-								</div>
-							</div>
-							<div className="service-text">
-								<h3>GEMA GITA SMEDIA</h3>
-								<a className="btn" href="img/service-4.jpg" data-lightbox="service">
-									+
-								</a>
-							</div>
-						</div>
-					</div>
-					<div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-						<div className="service-item">
-							<div className="service-img">
-								<img src="img/service-5.jpg" alt="Galeri" />
-								<div className="service-overlay">
-									<p>Gerakan Peduli Lingkungan Menyambut Hari Santri 2019</p>
-								</div>
-							</div>
-							<div className="service-text">
-								<h3>Kegiatan Sosial</h3>
-								<a className="btn" href="img/service-5.jpg" data-lightbox="service">
-									+
-								</a>
-							</div>
-						</div>
-					</div>
-					<div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-						<div className="service-item">
-							<div className="service-img">
-								<img src="img/service-6.jpg" alt="Galeri" />
-								<div className="service-overlay">
-									<p>Studi Perusahaan di The Bernardi Factory</p>
-								</div>
-							</div>
-							<div className="service-text">
-								<h3>Study Tour</h3>
-								<a className="btn" href="img/service-6.jpg" data-lightbox="service">
-									+
-								</a>
-							</div>
-						</div>
-					</div>
+					</div> */}
+					
 				</div>
+				<Route
+						path="/"
+						exact
+						children={({ match, history }) => {
+							return (
+								<a
+									href="/galeri"
+									className="btn btn-warning col text-center"
+									selected={match ? true : false}
+									onClick={() => {
+										history.push('/galeri');
+									}}
+								>
+									Selengkapnya
+								</a>
+							);
+						}}
+					/>
 			</div>
 		</div>
 	);

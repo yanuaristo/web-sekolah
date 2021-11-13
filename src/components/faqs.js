@@ -53,7 +53,7 @@ export default function Faqs() {
                                 <div className="card wow fadeInRight" data-wow-delay="0.1s">
                                     <div className="card-header">
                                         <a className="card-link collapsed" data-toggle="collapse" href="#collapseSix">
-                                            Apakah jurusan APK itu?
+                                            Apakah jurusan AKL itu?
                                         </a>
                                     </div>
                                     <div id="collapseSix" className="collapse" data-parent="#accordion-2">

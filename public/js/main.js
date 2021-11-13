@@ -4,6 +4,9 @@
     // Initiate the wowjs
     new WOW().init();
     
+    $(window).on('load', function() {
+        $('#myModal').modal('show');
+    });
     
     // Back to top button
     $(window).scroll(function () {

@@ -22,7 +22,7 @@ export default function TopBar() {
 										</div>
 										<div className="top-bar-text">
 											<h3>Jam Kerja Sekolah</h3>
-											<p>Senin - Sabtu, 8:00 - 13:00</p>
+											<p>Senin - Sabtu, 07:00 - 13:00</p>
 										</div>
 									</div>
 								</div>
@@ -372,7 +372,7 @@ export default function TopBar() {
 								</a>
 							</div>
 							<div className="ml-auto">
-								<a className="btn" href="#/">
+								<a className="btn" href="https://bit.ly/ppdbsmedia" target="_blank" rel="noopener noreferrer">
 									DAFTAR SEKARANG
 								</a>
 							</div>

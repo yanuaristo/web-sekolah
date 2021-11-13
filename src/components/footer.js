@@ -51,7 +51,7 @@ export default function Footer() {
 					<a href="/">Beranda</a>
 					<a href="/bantuan">Hubungi Kami</a>
 					<a href="#belajar">E-Learning</a>
-					<a href="#daftar">PPDB</a>
+					<a href="https://bit.ly/ppdbsmedia" target="_blank" rel="noopener noreferrer">PPDB</a>
 				</div>
 			</div>
 			<div className="container copyright">

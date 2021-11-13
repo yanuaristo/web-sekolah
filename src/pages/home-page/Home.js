@@ -1,6 +1,6 @@
 import React from 'react';
 import Artikel from './artikel';
-import Carousel from './carousel';
+import Banner from './carousel';
 import Galeri from './galeri';
 import Jurusan from './jurusan';
 import OutputSiswa from './outputsiswa';
@@ -12,8 +12,51 @@ import Faqs from '../../components/faqs';
 function Home() {
 	return (
 		<div className="wrapper">
+			<div className="portfolio-modal modal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+				{/* <div className="modal-dialog">
+					<div className="modal-content">
+						<div className="close-modal" data-dismiss="modal">
+							<i className="fa fa-times fa-3x" />
+						</div>
+						<div className="container">
+							<div className="row justify-content-center">
+								<div className="col-lg-8">
+									<div className="modal-body">
+										jancooook
+										<a href="https://bit.ly/ppdbsmedia" target="_blank">
+											<img
+												className="img-fluid d-block mx-auto"
+												src="img/carousel-5.jpg"
+												alt=""
+											/>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> */}
+				<div className="modal-dialog" role="document" style={{maxWidth: '80%'}}>
+					<div className="modal-content">
+						<div className="modal-body">
+							<button type="button" className="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+										
+										<a href="https://bit.ly/ppdbsmedia" target="_blank" rel="noopener noreferrer">
+											<img
+												className="img-fluid d-block mx-auto"
+												src="img/banner.jpeg"
+												alt=""
+											/>
+										</a>
+							</div>
+					</div>
+				</div>
+			</div>
+
 			{/* <!-- Carousel Start --> */}
-			<Carousel />
+			<Banner />
 			{/* <!-- Carousel End --> */}
 
 			{/* <!-- Feature Start--> */}
@@ -47,7 +90,6 @@ function Home() {
 			{/* <!-- Blog Start --> */}
 			<Artikel />
 			{/* <!-- Blog End --> */}
-
 		</div>
 	);
 }
