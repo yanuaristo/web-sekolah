@@ -31,7 +31,7 @@ export default function Jurusan() {
                                     <i className="flaticon-building"></i>
                                 </div>
                                 <div className="feature-text">
-                                    <h3>Administrasi</h3>
+                                    <h3>Akuntansi dan Keuangan Lembaga</h3>
                                     <p>Program studi yang berfokus pada perencanaan anggaran keuangan, pembayaran dan pendataan suatu oranisasi atau perkantoran atau perusahaan.</p>
                                 </div>
                             </div>

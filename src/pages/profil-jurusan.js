@@ -35,12 +35,12 @@ export default function ProfilJurusan() {
                                 <div className="card wow fadeInLeft" data-wow-delay="0.3s">
                                     <div className="card-header">
                                         <a className="card-link collapsed text-center" data-toggle="collapse" href="#collapseThree">
-                                            <h3>Administrasi Perkantoran</h3>
+                                            <h3>Akuntansi dan Keuangan Lembaga</h3>
                                         </a>
                                     </div>
                                     <div id="collapseThree" className="collapse" data-parent="#accordion-1">
                                         <div className="card-body">
-                                                Program studi Administrasi Perkantoran atau disebut juga Kesekretariatan adalah program studi yang berfokus pada perencanaan anggaran keuangan, pembayaran dan pendataan suatu oranisasi atau perkantoran atau perusahaan.
+                                                Program studi Akuntansi dan Keuangan Lembaga atau disebut juga Kesekretariatan adalah program studi yang berfokus pada perencanaan anggaran keuangan, pembayaran dan pendataan suatu oranisasi atau perkantoran atau perusahaan.
                                         </div>
                                     </div>
                                 </div>

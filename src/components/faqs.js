@@ -58,7 +58,7 @@ export default function Faqs() {
                                     </div>
                                     <div id="collapseSix" className="collapse" data-parent="#accordion-2">
                                         <div className="card-body">
-                                                Program studi Administrasi Perkantoran atau disebut juga Kesekretariatan adalah program studi yang berfokus pada perencanaan anggaran keuangan, pembayaran dan pendataan suatu oranisasi atau perkantoran atau perusahaan.
+                                                Program studi Akuntansi dan Keuangan Lembaga atau disebut juga Kesekretariatan adalah program studi yang berfokus pada perencanaan anggaran keuangan, pembayaran dan pendataan suatu oranisasi atau perkantoran atau perusahaan.
                                         </div>
                                     </div>
                                 </div>

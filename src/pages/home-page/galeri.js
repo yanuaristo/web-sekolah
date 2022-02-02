@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Route } from 'react-router-dom';
+// import { Route } from 'react-router-dom';
 import axios from 'axios';
 
 import CardGaleri from '../../components/card-galeri';
@@ -76,7 +76,7 @@ export default function Galeri() {
 					</div> */}
 					
 				</div>
-				<Route
+				{/* <Route
 						path="/"
 						exact
 						children={({ match, history }) => {
@@ -93,7 +93,7 @@ export default function Galeri() {
 								</a>
 							);
 						}}
-					/>
+					/> */}
 			</div>
 		</div>
 	);
